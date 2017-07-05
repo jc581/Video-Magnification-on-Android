@@ -1,5 +1,13 @@
 **opencv-videocapture** provides a sample Android app that uses [OpenCV](http://opencv.org/platforms/android/) to process a video file.
 
+## Usage
+
+**opencv-videocapture** is an extremely bare bones, do nothing app. It actually 
+does nothing other than open a video file with a [`VideoCapture`](http://docs.opencv.org/java/2.4.2/index.html?org/opencv/highgui/VideoCapture.html).
+The video file, located in the assets folder, must be an AVI file using the MJPEG 
+codec. Theoretically, other formats may be supported by using FFmpeg, which can
+be obtained through [JavaCV](https://github.com/bytedeco/javacv).
+
 ## Dependencies
 
 This app is built using Gradle and support Android 5.0 (Lollipop, API 21) and higher.
