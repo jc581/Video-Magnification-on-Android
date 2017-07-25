@@ -123,6 +123,7 @@ public class VideoProcessor {
 
                     // reconstruct the each frame based on its Laplacian pyramid and last-level Gaussian image
 
+
                     // TODO: 7/25/17 construct and output a new video file (amplified version) ??
                 }
 
