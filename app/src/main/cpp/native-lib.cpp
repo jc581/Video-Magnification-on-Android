@@ -11,3 +11,5 @@ Java_org_dihi_proto_opencv_processvideo_MainActivity_stringFromJNI(
     std::string hello = "Hello from C++";
     return env->NewStringUTF(hello.c_str());
 }
+
+

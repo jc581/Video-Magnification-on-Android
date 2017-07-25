@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
+                    }
+                    finally {
                         try {
                             if (in != null) in.close();
                         } catch (IOException e) {
