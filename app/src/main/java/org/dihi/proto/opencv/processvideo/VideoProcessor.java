@@ -44,7 +44,7 @@ public class VideoProcessor {
                     mat = new Mat();
                 }
 
-                // TODO: 7/21/17  need to split each frame into RGB channels ??
+                // TODO: 7/21/17  need to split each frame into RGB channels ?? yes
 
                 // prepare the data structure to hold all levels of Laplacian, for later temporal filtering
                 // including the smallest image of Guassian pyramid, for later reconstruction
@@ -63,7 +63,7 @@ public class VideoProcessor {
                     Mat temp3 = new Mat();
                     Mat lap = new Mat();
 
-                    // TODO: 7/24/17 need to store new Mat()
+                    // TODO: 7/24/17 need to store in new Mat()??
                     for (int i = 0; i < LEVELS - 1; i++) {
                         Imgproc.pyrDown(temp1, temp2);
                         Imgproc.pyrUp(temp2, temp3, temp1.size());
@@ -108,7 +108,8 @@ public class VideoProcessor {
                                 }
 
                                 // Fourier Transformation(DFT) of this signal into frequency domain
-
+                                int addPixelRows = Core.getOptimalDFTSize();
+                                Core.dft();
                                 // band-pass filtering the signal
 
                                 // inverse DFT the filtered signal to time domain
@@ -124,7 +125,7 @@ public class VideoProcessor {
                     // reconstruct the each frame based on its Laplacian pyramid and last-level Gaussian image
 
 
-                    // TODO: 7/25/17 construct and output a new video file (amplified version) ??
+                    // TODO: 7/25/17 construct and output a new video file with amplified effect
                 }
 
 
